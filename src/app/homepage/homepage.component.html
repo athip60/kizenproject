@@ -1,0 +1,1175 @@
+<div
+  xFill
+  fxLayout="column"
+  fxLayoutAlign=" stretch"
+  class="background-calculate content"
+>
+  <mat-card style="border-radius: 10px">
+    <mat-card-header>
+      <mat-card-title
+        style="
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          color: #333333;
+        "
+      >
+        กรอกข้อมูลสาร
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form name="form" (ngSubmit)="onSubmit()" novalidate>
+        <div fxLayout="row" fxLayoutAlign="center stretch" fxLayoutGap="30px" *ngIf="change == 'lg' || change == 'md'">
+          <div fxFlex="50%">
+            <mat-label>Methanol</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_tb"
+                    [(ngModel)]="form.methanol_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_fm"
+                    [(ngModel)]="form.methanol_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>EtOH</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Int</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_tb"
+                    [(ngModel)]="form.int_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_fm"
+                    [(ngModel)]="form.int_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>2-NBA</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>2-NBA</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>HCl 1 M</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_tb"
+                    [(ngModel)]="form.hcl_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_fm"
+                    [(ngModel)]="form.hcl_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+          <div fxFlex="50%">
+            <mat-label>HCl 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>K2HPO4</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_tb"
+                    [(ngModel)]="form.ethyl_acetate_2_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_fm"
+                    [(ngModel)]="form.ethyl_acetate_2_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="30px" *ngIf="change == 'sm'">
+          <div fxFlex="50%">
+            <mat-label>Methanol</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_tb"
+                    [(ngModel)]="form.methanol_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_fm"
+                    [(ngModel)]="form.methanol_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>EtOH</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Int</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_tb"
+                    [(ngModel)]="form.int_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_fm"
+                    [(ngModel)]="form.int_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>2-NBA</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>2-NBA</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>HCl 1 M</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_tb"
+                    [(ngModel)]="form.hcl_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_fm"
+                    [(ngModel)]="form.hcl_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+          <div fxFlex="50%">
+            <mat-label>HCl 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>K2HPO4</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_tb"
+                    [(ngModel)]="form.ethyl_acetate_2_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_fm"
+                    [(ngModel)]="form.ethyl_acetate_2_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="30px" *ngIf="change == 'xs'">
+          <div fxFlex="50%">
+            <mat-label>Methanol</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_tb"
+                    [(ngModel)]="form.methanol_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="methanol_fm"
+                    [(ngModel)]="form.methanol_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>EtOH</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="etoh_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.etoh_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="ethyl_acetate_1_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.ethyl_acetate_1_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Int</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_tb"
+                    [(ngModel)]="form.int_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="int_fm"
+                    [(ngModel)]="form.int_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>2-NBA</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>2-NBA</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="nba_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.nba_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>HCl 1 M</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_tb"
+                    [(ngModel)]="form.hcl_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="hcl_1_m_fm"
+                    [(ngModel)]="form.hcl_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+          <div fxFlex="50%">
+            <mat-label>HCl 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="hcl_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.hcl_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>K2HPO4</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="k2hpo4_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.k2hpo4_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>NaOH 1 M (Recheck)</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_tb"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    name="naoh_1_m_recheck_fm"
+                    style="width: 100%"
+                    [(ngModel)]="form.naoh_1_m_recheck_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+            <mat-label>Ethyl acetate</mat-label>
+            <div
+              fxLayout="column"
+              fxLayoutAlign="center stretch"
+              fxLayoutGap="10px"
+              style="margin-top: 10px"
+            >
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>T + B</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_tb"
+                    [(ngModel)]="form.ethyl_acetate_2_tb"
+                  />
+                </mat-form-field>
+              </p>
+              <p fxFlex="50%">
+                <mat-form-field appearance="outline" style="width: 100%">
+                  <mat-label>F + M</mat-label>
+                  <input
+                    matInput
+                    placeholder="Placeholder"
+                    type="number"
+                    style="width: 100%"
+                    name="ethyl_acetate_2_fm"
+                    [(ngModel)]="form.ethyl_acetate_2_fm"
+                  />
+                </mat-form-field>
+              </p>
+            </div>
+          </div>
+        </div>
+        <mat-card-actions>
+          <button
+            mat-stroked-button
+            type="submit"
+            color="primary"
+            style="width: 100%; font-size: 1.3rem; height: 50px"
+          >
+            ดูผลลัพธ์
+          </button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

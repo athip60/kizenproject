@@ -1,0 +1,42 @@
+<div>
+  <span style="float: right; cursor: pointer">
+    <mat-icon
+      aria-hidden="false"
+      (click)="closeDialog()"
+      aria-label="Example home icon"
+      >close</mat-icon
+    >
+  </span>
+  <h1 mat-dialog-title>ผลลัพธ์การคำนวณ</h1>
+</div>
+<div mat-dialog-content>
+  <ng-container *ngFor="let item of this.data_result">
+    <ng-container
+      *ngIf="
+        item.tbml !== 0 || item.tbmL !== 0 || item.fmml !== 0 || item.fmmL !== 0
+      "
+    >
+      <h2>{{ item.name }}</h2>
+      <div style="margin-left: 20px">
+        <p style="font-size: 1.15rem">วิธี T+B</p>
+        <span style="display: flex; margin-left: 20px">
+          <p style="font-size: 1rem; margin-right: 20px">{{ item.tbml }} ml</p>
+          <p style="font-size: 1rem">{{ item.tbmL }} mL</p>
+        </span>
+        <p style="font-size: 1.15rem">วิธี F+M</p>
+        <span style="display: flex; margin-left: 20px">
+          <p style="font-size: 1rem; margin-right: 20px">{{ item.fmml }} ml</p>
+          <p style="font-size: 1rem">{{ item.fmmL }} mL</p>
+        </span>
+        <p style="font-size: 1.15rem">รวม</p>
+        <span style="display: flex; margin-left: 20px">
+          <p style="font-size: 1rem; margin-right: 20px">
+            {{ item.totalml }} ml
+          </p>
+          <p style="font-size: 1rem">{{ item.totalmL }} mL</p>
+        </span>
+      </div>
+      <hr />
+    </ng-container>
+  </ng-container>
+</div>

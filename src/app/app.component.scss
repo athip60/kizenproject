@@ -1,0 +1,119 @@
+* {
+  font-family: maledpan;
+}
+
+mat-icon {
+  font-family: "Material Icons" !important;
+}
+.gap {
+  flex: 1 1 auto;
+}
+
+.container {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-sidenav {
+  width: 290px;
+}
+
+.sidenav-logo-fix {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 26px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  color: #66615b;
+}
+
+.mat-expansion-panel-header {
+  font-size: 16px;
+  .mat-expansion-panel-header-title {
+    color: #66615b;
+  }
+  .mat-expansion-panel-header-title:hover {
+    color: #ce8054;
+  }
+}
+::ng-deep .specific-class > .mat-expansion-indicator:after {
+  color: #66615b;
+}
+
+.mat-expansion-panel-header:hover {
+  font-size: 16px;
+  background: white !important;
+}
+
+.mat-list-item:hover {
+  background: white;
+}
+
+.sidenav-list-item-fix {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  color: #66615b;
+}
+.sidenav-list-item-fix:hover {
+  color: #ce8054;
+  .sidenav-list-item-text {
+    color: #ce8054;
+  }
+}
+
+.sidenav-list-item-text {
+  color: #66615b;
+  padding-top: 3px;
+  padding-left: 18px;
+  font-size: 16px;
+}
+
+.mat-drawer-side {
+  border-right: solid 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%),
+    0px 5px 8px 0px rgb(0 0 0 / 14%), 0px 1px 14px 0px rgb(0 0 0 / 12%);
+}
+
+.sidenav-list-item-icon {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.mat-toolbar {
+  background: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+  height: 30px;
+}
+.footer {
+  height: 30px;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+.main {
+  flex: 1;
+}
